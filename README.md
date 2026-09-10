@@ -1,51 +1,49 @@
-# 🎯 Battleship Game
+# Battleship Game
 
-A web-based Battleship game built using JavaScript, HTML, and CSS as part of [The Odin Project](https://www.theodinproject.com/) curriculum. This implementation features a playable single-player mode with a modular architecture and dynamic UI updates powered by Webpack.
-
----
-
-## 🚀 Features
-
-- **Single Player Mode** – Play against a basic computer opponent.
-- **Random Ship Placement** – Ships are placed randomly without overlaps or out-of-bound errors.
-- **Turn-Based Gameplay** – Players alternate turns attacking each other's grids.
-- **Endgame Detection** – Automatically declares the winner when a fleet is destroyed.
-- **Dynamic UI** – Renders game screens and boards dynamically based on the game state.
-- **Visual Feedback** – Distinct styles for hits, misses, and sunk ships.
-- **Pub-Sub Architecture** – Decouples UI rendering from game logic for easier maintenance.
-- **Fully Modular Codebase** – Clean separation of responsibilities across modules.
+This is a web-based Battleship game built with JavaScript, HTML, and CSS. The project focuses on a playable single-player experience, modular code organization, and a responsive interface powered by Webpack.
 
 ---
 
-## 🧩 Project Structure
+## Features
 
-```
-
-├── src/
-│   ├── app.js                # Game logic: Ship, Gameboard, Player
-│   ├── gameFlow\.js           # Orchestrates game state and transitions
-│   ├── displayerController.js # Renders UI and updates game board
-│   ├── UIController.js       # Sets up user interaction event listeners
-│   ├── pubsub.js             # Pub-Sub system for event messaging
-│   ├── index.js              # Entry point
-│   ├── index.html            # Main HTML template
-│   └── style.css             # Styling for layout and game boards
-
-````
+- Single-player gameplay against a basic computer opponent
+- Random ship placement with collision and boundary checks
+- Turn-based attack flow across both boards
+- Automatic winner detection when a fleet is destroyed
+- Dynamic UI updates that reflect the current state of the game
+- Clear visual feedback for hits, misses, and sunk ships
+- Pub-sub architecture to separate game logic from rendering concerns
+- A modular codebase with clear responsibilities across files
 
 ---
 
-## ⚙️ Development & Build Setup
+## Project Structure
 
-This project uses a custom **Webpack 5** template to manage assets and streamline development.
+```text
+src/
+├── app.js                # Core game logic: Ship, Gameboard, Player
+├── gameFlow.js          # Controls game flow and state transitions
+├── displayerController.js # Renders board updates and user-facing states
+├── UIController.js      # Handles user interactions and input events
+├── pubsub.js            # Event-based messaging system
+├── index.js             # Application entry point
+├── index.html           # Main page structure
+├── style.css            # Layout and board styling
+``` 
 
-### 📦 Install Dependencies
+---
+
+## Development and Build Setup
+
+This project uses a custom Webpack configuration to bundle assets and support local development.
+
+### Install Dependencies
 
 ```bash
 npm install
-````
+```
 
-### 🔧 Available Scripts
+### Available Scripts
 
 ```json
 "scripts": {
@@ -56,54 +54,51 @@ npm install
 }
 ```
 
-| Script   | Description                         |
-| -------- | ----------------------------------- |
-| `start`  | Launches the development server     |
-| `build`  | Generates a production-ready bundle |
-| `lint`   | Runs ESLint for code quality checks |
-| `format` | Formats code using Prettier         |
+| Script | Description |
+| --- | --- |
+| `start` | Launches the development server |
+| `build` | Produces a production-ready bundle |
+| `lint` | Runs ESLint for code quality checks |
+| `format` | Formats the project with Prettier |
 
-### 🚀 Build for Production
+### Production Build
 
 ```bash
 npm run build
 ```
 
-This generates a bundled version of the app in the `dist/` directory, ready to be deployed on any static web host.
+This creates a bundled version of the app in the `dist/` directory, which can be served on any static hosting platform.
 
 ---
 
-## 🧠 Game Rules
+## Game Rules
 
-* Each player has a 10×10 grid and five ships (lengths: 5, 4, 3, 3, 2).
-* Players take turns choosing coordinates to attack.
-* Hits, misses, and sunk ships are visually represented.
-* The first player to sink all opponent ships wins.
-
----
-
-## 📝 To-Do / Incomplete Features
-
-The following features were considered but are not yet implemented:
-
-* [ ] **Drag-and-Drop Ship Placement**
-* [ ] **2-Player Local Mode** (hot seat on same machine)
-* [ ] **Smarter Computer AI** (targeting adjacent cells after a hit)
-* [ ] **Manual Ship Placement with Clicks**
-* [ ] **Messages indicating state of game**
-* [ ] **Game Reset Button / Replay Flow**
-
-These features may be explored in future iterations.
+- Each player controls a 10x10 grid and commands five ships with lengths of 5, 4, 3, 3, and 2.
+- Players take turns selecting coordinates to attack.
+- Hits, misses, and sunk ships are displayed visually on the board.
+- The first player to destroy all enemy ships wins the match.
 
 ---
 
-## 👤 Author
+## Planned Improvements
+
+The following features are not currently implemented, but could be added in future iterations:
+
+- [ ] Drag-and-drop ship placement
+- [ ] Two-player local mode on the same machine
+- [ ] More advanced computer AI with target prioritization
+- [ ] Manual ship placement via click interactions
+- [ ] Improved in-game status messaging
+- [ ] Reset or replay flow for a new match
+
+---
+
+## Author
 
 **Aish Waheed**
-*Student at [The Odin Project](https://www.theodinproject.com/)*
 
 ---
 
-## 📜 License
+## License
 
 This project is licensed under the [MIT License](LICENSE).
